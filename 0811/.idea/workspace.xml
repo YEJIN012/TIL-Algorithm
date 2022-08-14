@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d505ca5-e622-4474-ba11-8d848a2d07eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../0802/2525.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0803/1712.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0804/1157.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0804/2750.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0807/11653.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0807/1546.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0807/1978.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0807/2581.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0807/2908.py" beforeDir="false" />
-    </list>
+    <list default="true" id="7d505ca5-e622-4474-ba11-8d848a2d07eb" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +28,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
   </component>
   <component name="RunManager" selected="Python.8958OX퀴즈">
     <configuration name="달팽이숫자" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
