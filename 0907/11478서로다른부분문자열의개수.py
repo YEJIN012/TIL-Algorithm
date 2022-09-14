@@ -8,6 +8,7 @@ for k in range(1,len(N)+1) :
             K = N[i:i+k]
             set_N.append(K)
 print(len(list(set(set_N))))
+# print(len(set(set_N))) 도 가능
 
 
 # 포기..... 버리자 #
