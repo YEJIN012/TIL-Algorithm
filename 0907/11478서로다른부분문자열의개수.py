@@ -1,7 +1,8 @@
 import sys
+from typing import List
 
 N = sys.stdin.readline()[:-1]
-set_N = []
+set_N: list[str] = []
 for k in range(1,len(N)+1) :
     for i in range(len(N)+1) :
         if i+k < len(N)+1 :
