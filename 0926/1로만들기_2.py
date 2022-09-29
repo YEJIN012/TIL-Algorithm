@@ -1,9 +1,13 @@
-N = int(input())
-t = 0
-ans = []
-while N != 1 :
+def dfs(N) :
+    visited = [0] * (10**6+1)
+    q = [N]
+    while q :
+        n = q.pop(0)
+        if
 
-    for w in [N//2, N//3, N-1] :
+N = int(input())
+t = bfs(N)
+ans = [N]
 
 print(t)
 print(*ans)
