@@ -12,13 +12,15 @@ for i,j in participant_dic.items() :# i = 참석자 선수 이름, j = 완주자
 
 print(answer)
 
+
+### dictionary 보충
 # 카운트없이 list를 그대로 dict형으로 바꿈
 participant_dict = {x : 1 for x in participant}
 # participant_dict = {participant[i] : 1 for i in range(0,len(participant))}
-print(participant_dict)
+print(participant_dict)     # {'mislav': 1, 'stanko': 1, 'ana': 1}
 # count method를 사용하여 list 원소를 키로 받고 중복값이 있을 경우 카운트하여 value값으로 받는 dict생성
 participant_dic2 = {x : participant.count(x) for x in participant}
-print(participant_dic2)
+print(participant_dic2)     # {'mislav': 2, 'stanko': 1, 'ana': 1}
 
 
 
