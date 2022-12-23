@@ -37,3 +37,21 @@ def solution(sizes):
     print(x, y)
     answer = x*y
     return answer
+
+# # 다른사람 풀이
+# # sizes = [[3,5],[6,2]]
+# sizes = [[60, 50], [30, 70], [60, 30], [80, 40]]
+# print(list(max(x) for x in sizes))
+# print(list(min(x) for x in sizes))
+# print(max(max(x) for x in sizes) * max(min(x) for x in sizes))
+#
+# # 다른사람 풀이2
+#
+# print(list(sum(sizes, [])))     # sum의 두번째 인자(start)에 empty list를 전달해서 sizes의 총합이 아니라 sizes의 모든 요소가 담긴 1차원 list로 변환
+#                                 # start = [] , 빈배열 start에 size 리스트를 계속 더해준다.
+# # [60, 50, 30, 70, 60, 30, 80, 40]
+# # max(sum(sizes, [])) 항상 같음 -> 80
+#
+# solution = lambda sizes: max(sum(sizes, [])) * max(min(size) for size in sizes)
+# print(solution(sizes))
+
