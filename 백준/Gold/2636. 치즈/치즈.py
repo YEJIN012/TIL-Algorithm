@@ -25,13 +25,13 @@ while True :
                     visited = [[0] * (M + 2) for _ in range(N+2)]
                     visited[i][j] = 1
                     if bfs(i,j) :
-                        melted.append((i,j))
+                        melted.append((i,j))    # 한시간동안 녹게 되는 치즈 위치 저장(c가 되는 위치)
                         cnt += 1
 
-        if cnt :
+        if cnt :    # 녹을 치즈가 남아있으면 반복.
             ans = cnt
             hour += 1
-            for a, b in melted :
+            for a, b in melted :    # 한시간동안 녹은 치즈는 0으로 지우기
                 arr[a][b] = 0
         else :
             break
