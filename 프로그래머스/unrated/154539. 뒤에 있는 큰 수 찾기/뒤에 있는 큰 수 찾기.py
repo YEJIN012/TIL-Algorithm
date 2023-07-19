@@ -7,7 +7,6 @@ def solution(numbers):
                 break
             else :
                 if answer[j] == -1 :
-                    answer[i] = -1
                     break
                 elif numbers[i] < answer[j] :
                     answer[i] = answer[j]
