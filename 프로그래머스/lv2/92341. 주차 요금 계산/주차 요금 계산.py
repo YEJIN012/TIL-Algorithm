@@ -4,6 +4,7 @@
 
 # 차량번호를 조회하기 위해서는 dictionary가 유리하고
 # 차량번호 정렬을 위해서는 list여야 한다.
+import math
 def solution(fees, records):
     parking = {}    # 입차 딕셔너리 = {차량번호 : [입차시간, 누적 주차시간]}
     for idx, record in enumerate(records) :
@@ -15,25 +16,25 @@ def solution(fees, records):
                 parking[rlist[1]][1] += time - parking[rlist[1]][0] # 기존 입차시간과 누적시간 계산
                 parking[rlist[1]][0] = -1    # 입차시간 리셋
             else :
-                parking[rlist[1]][0] = time
+                parking[rlist[1]][0] = time  # 처음이 아닌 입차시간 기록
         else :
-            parking[rlist[1]] = [time, 0]
-        print(rlist)
-    print(parking)
-    answer = []     # answer = [[ 차량번호, 총 요금 ]]
+            parking[rlist[1]] = [time, 0]   # 첫 입차시간 기록
+    
+    answer = []     # answer = [[ 차량번호, 총 주차시간 ]]
     for number in parking.keys() :
-        if parking[number][0] == -1 :
+        if parking[number][0] == -1 :   # 주차시간이 모두 계산된 차량이면 바로 입력
             answer.append([number, parking[number][1]])
-        else :
+        else :                          # 출차기록이 안된 차량은 계산 후 입력 (23:59 출차)
             parking[number][1] += 23*60 + 59 - parking[number][0]
             answer.append([number, parking[number][1]])
-    answer = sorted(answer, key = lambda x : x[0])
-    print(answer)
+            
+    answer = sorted(answer, key = lambda x : x[0])  # 차량번호 정렬
+    
+    # 주차 요금 계산
     for idx, ans in enumerate(answer) :
-        if ans[1] <= fees[0] :
+        if ans[1] <= fees[0] :  # 기본 시간 이하
             answer[idx] = fees[1]
-        else :
-            order = 1 if (ans[1]-fees[0])%fees[2] > 0 else  0
-            answer[idx] = fees[1] + ((ans[1]-fees[0])//fees[2] + order) * fees[3] 
-    print(answer)
+        else :                  # 올림 계산
+            answer[idx] = fees[1] + math.ceil((ans[1]-fees[0])/fees[2]) * fees[3] 
+
     return answer
