@@ -17,7 +17,7 @@ def solution(cacheSize, cities):
             time += 1
         # cache miss
         else :
-            if cacheSize > 0 :
+            if cacheSize > 0 :  # 캐시가 0일 때를 고려해서 append해야함. (테스트 7,17번)
                 if len(cache) == cacheSize  :
                     cache.pop(0)
                 cache.append(city)
