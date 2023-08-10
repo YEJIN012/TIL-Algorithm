@@ -18,8 +18,8 @@ def bfs(n) :
                     q.append(ni)                  # ni만 q에 담기
                 else :              # 있으면,  # 무조건 이동하므로, ni에서 다시 시작할 수 없다. 따라서 ni는 방문표시와 q를 담지 않는다.
                     if visited[arr[ni]] == 0 :
-                        visited[arr[ni]] = visited[i] + 1 # 뱀 사다리 이동 위치의 뱀사다리도 확인해야하므로, 뱀 사다리로 이동한 위치는 방문표시를 하지 않는다.
-                        q.append(arr[ni])               # 뱀 사다리 이동 위치만 q에 담기.
+                        visited[arr[ni]] = visited[i] + 1
+                        q.append(arr[ni])                   # 뱀 사다리 이동 위치만 q에 담기.
 
             if ni == 100 :
                 return visited[ni]
